@@ -22,7 +22,7 @@ image_channel_means = [122.77093945, 116.74601272, 104.09373519]
 image_channel_stds = [68.50053285, 66.63215831, 70.32316309]
 
 
-@attr.s(, repr=False)
+@attr.s(repr=False)
 class TextEmbedding(nn.Module):
     n_vocab: int = attr.ib()
     n_context: int = attr.ib()
@@ -49,7 +49,7 @@ class TextEmbedding(nn.Module):
         return F.embedding(x, self.w_voc) + self.w_pos[None, :, :]
 
 
-@attr.s(, repr=False)
+@attr.s(repr=False)
 class ImageEmbedding(nn.Module):
     image_size: int = attr.ib()
     patch_size: int = attr.ib()
@@ -129,7 +129,7 @@ class ImageEmbedding(nn.Module):
         return self.ln(x)
 
 
-@attr.s(, repr=False)
+@attr.s(repr=False)
 class AttentionResblock(nn.Module):
     n_state: int = attr.ib()
     n_resblocks: int = attr.ib()
@@ -223,7 +223,7 @@ class AttentionResblock(nn.Module):
         return m + r
 
 
-@attr.s(, repr=False)
+@attr.s(repr=False)
 class FullyConnectedResblock(nn.Module):
     """
     Not imported from other files because we retain Alec's original inits.
@@ -260,7 +260,7 @@ class FullyConnectedResblock(nn.Module):
         return m + r
 
 
-@attr.s(, repr=False)
+@attr.s(repr=False)
 class TransformerBlock(nn.Module):
     n_state: int = attr.ib()
     n_resblocks: int = attr.ib()
@@ -282,7 +282,7 @@ class TransformerBlock(nn.Module):
         return self.f_mlp(self.f_attn(x))
 
 
-@attr.s(, repr=False)
+@attr.s(repr=False)
 class TextFeatureExtractor(nn.Module):
     n_state: int = attr.ib()
     n_embd: int = attr.ib()
@@ -315,7 +315,7 @@ class TextFeatureExtractor(nn.Module):
         return self.f(x[:, 0])
 
 
-@attr.s(, repr=False)
+@attr.s(repr=False)
 class ImageFeatureExtractor(nn.Module):
     n_state: int = attr.ib()
     n_embd: int = attr.ib()
@@ -335,7 +335,7 @@ class ImageFeatureExtractor(nn.Module):
         return self.f(x[:, 0])
 
 
-@attr.s(, repr=False)
+@attr.s(repr=False)
 class TextEncoder(nn.Module):
     n_bpe_vocab: int = attr.ib()
     max_text_len: int = attr.ib()
@@ -414,7 +414,7 @@ class TextEncoder(nn.Module):
         return h
 
 
-@attr.s(, repr=False)
+@attr.s(repr=False)
 class ImageEncoder(nn.Module):
     image_size: int = attr.ib()
     patch_size: int = attr.ib()
