@@ -125,7 +125,7 @@ class DenseCausalAttentionMask(AttentionMask):
             return np.tril(np.ones(2 * [self.block_size], dtype=np.bool))
 
 
-@attr.s(eq=False, repr=False)
+@attr.s(, repr=False)
 class AttentionInfo:
     n_heads: int = attr.ib()
     ctx_blks_q: int = attr.ib()

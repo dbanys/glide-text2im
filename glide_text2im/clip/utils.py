@@ -25,7 +25,7 @@ def zero_key_bias_grad(x: torch.Tensor) -> torch.Tensor:
     return ZeroKeyBiasGrad.apply(x)
 
 
-@attr.s(eq=False, repr=False)
+@attr.s(, repr=False)
 class LayerNorm(nn.Module):
     n_state: int = attr.ib()
     eps: float = attr.ib(default=1e-6)
@@ -44,7 +44,7 @@ class LayerNorm(nn.Module):
         )
 
 
-@attr.s(eq=False, repr=False)
+@attr.s(, repr=False)
 class Affine(nn.Module):
     n_in: int = attr.ib()
     n_out: int = attr.ib()
