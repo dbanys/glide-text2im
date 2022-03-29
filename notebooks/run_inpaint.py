@@ -1,5 +1,6 @@
 # Run this line  to install the package if it is
 # not already installed.
+from typing import Tuple
 
 from IPython.display import display
 from PIL import Image
@@ -201,6 +202,7 @@ up_samples = diffusion_up.p_sample_loop(
     denoised_fn=denoised_fn,
 )[:batch_size]
 model_up.del_cache()
+file_name = 'inpaint.jpeg'
 
 def save_images(batch: th.Tensor):
     """ save batch of images """

@@ -104,7 +104,6 @@ samples = diffusion.p_sample_loop(
 model.del_cache()
 
 # Show the output
-show_images(samples)
 ##############################
 # Upsample the 64x64 samples #
 ##############################
@@ -146,7 +145,6 @@ up_samples = diffusion_up.ddim_sample_loop(
 model_up.del_cache()
 
 # Show the output
-show_images(up_samples)
 file_name = 'text2im.jpeg'
 def save_images(batch: th.Tensor):
     """ save batch of images """
