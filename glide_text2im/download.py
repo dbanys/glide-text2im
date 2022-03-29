@@ -10,8 +10,8 @@ from tqdm.auto import tqdm
 MODEL_PATHS = {
     "base": "https://openaipublic.blob.core.windows.net/diffusion/dec-2021/base.pt",
     "upsample": "https://openaipublic.blob.core.windows.net/diffusion/dec-2021/upsample.pt",
-    "base-inpaint": "https://openaipublic.blob.core.windows.net/diffusion/dec-2021/base_inpaint.pt",
-    "upsample-inpaint": "https://openaipublic.blob.core.windows.net/diffusion/dec-2021/upsample_inpaint.pt",
+    "base-inpaint": "https://assets.paperspace.io/techtalk03302022/base_inpaint.pt",
+    "upsample-inpaint": "https://assets.paperspace.io/techtalk03302022/upsample_inpaint.pt",
     "clip/image-enc": "https://openaipublic.blob.core.windows.net/diffusion/dec-2021/clip_image_enc.pt",
     "clip/text-enc": "https://openaipublic.blob.core.windows.net/diffusion/dec-2021/clip_text_enc.pt",
 }
